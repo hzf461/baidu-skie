@@ -107,8 +107,8 @@
     </div>
     <div :class="['nav', {'show': flag}]" id="nav">
       <ul class="nav-list" id="nav-list">
-        <li class="item" @click="toggle(index)" @mouseleave="mouseleave" @mouseenter="hover(index)" v-for="(item, index) in list"
-          :key="index">
+        <li class="item" @click="toggle(index)" @mouseleave="mouseleave" @mouseenter="hover(index)"
+          v-for="(item, index) in list" :key="index">
           <div :class="['tips', { 'active': index == currentIndex }]"></div>
           <img :src="item">
         </li>
@@ -122,11 +122,11 @@
       data: {
         flag: false,
         currentIndex: 0,
-		// 添加一行注释
+        // 添加一行注释
         list: ['images/0.jpg', 'images/1.jpg', 'images/2.jpg', 'images/3.jpg', 'images/4.jpg', 'images/5.jpg']
       },
       methods: {
-        toggle(index) {   
+        toggle(index) {
           this.currentIndex = index
         },
         hover(index) {
