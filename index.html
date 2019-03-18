@@ -120,7 +120,7 @@
   </div>
   <script src="./js/jquery.min.js"></script>
   <script>
-    $(function() {
+    $(function () {
       var ols = $('#nav-list .item');
       var tips = `<div class="tips"></div>`;
       var count = 0;
@@ -129,19 +129,19 @@
 
       ols.eq(0).append(tips);
 
-      ols.click(function() {
+      ols.click(function () {
         var index = $(this).index();
         count = index;
         show(index);
         ols.eq(index).append(tips).siblings().find('.tips').remove();
       });
 
-      ols.mouseover(function() {
+      ols.mouseover(function () {
         var index = $(this).index();
         show(index);
       });
 
-      ols.mouseout(function() {
+      ols.mouseout(function () {
         show(count);
       });
 
@@ -149,7 +149,7 @@
         $('#bg').css('background-image', `url(./images/${x}.jpg)`);
       }
 
-      $('#toggle').click(function() {
+      $('#toggle').click(function () {
         $('#nav').css({
           top: getTop()
         });
